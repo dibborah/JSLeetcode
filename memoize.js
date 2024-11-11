@@ -39,3 +39,8 @@ console.log(callCount);
  * memoizedFn(2, 3) // 5
  * console.log(callCount) // 1 
  */
+
+
+// solve the factorial problem
+// using recursion
+// then fix for the factorial fn test case
