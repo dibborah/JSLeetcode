@@ -27,7 +27,7 @@ console.log(callCount);
 console.log(memoizeFn(1, 2));
 console.log(callCount);
 
-// [4,4, 1, 3, 2]
+// [4, 4, 1, 3, 2]
 
 /** 
  * let callCount = 0;
