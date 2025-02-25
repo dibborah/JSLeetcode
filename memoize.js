@@ -1,17 +1,13 @@
 function memoize(fn) {
-    const argsCheckList = []
-    return function (...args) {
-        argsCheckList.push(...args)
-        if (argsCheckList.length > 4) {
-            argsCheckList.shift();
-            argsCheckList.shift();
-        }
-        if ((argsCheckList[0] === argsCheckList[2])
-            && (argsCheckList[1] === argsCheckList[3])) {
-            return argsCheckList[0] + argsCheckList[1];
-        } else {
-            return fn(...args)
-        }
+    let db = new Map();
+    return function(...args) {
+      if(db.has(args + '')) {
+          return db.get(args + '');
+      } else {
+          const result = fn(...args);
+          db.set(args + '', result);
+          return result;
+      };
     };
 };
 
