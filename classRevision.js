@@ -37,6 +37,12 @@ class Person {
     this.lastName = lastName;
     this.age = age;
   };
+  static classMethod() {
+    return 'this is a class method';
+  };
+  static classProperty() {
+    return 'this is a class property';
+  };
   // getter method
   get fullName() {// method made behave like a property
     return `${this.firstName} ${this.lastName}`;
@@ -54,11 +60,19 @@ const person1 = new Person('harshit', 'sharma', 23);
 
 // console.log('person1', person1);
 
-console.log('person1', person1.fullName);
-person1.fullName = 'Amresh Singh';
+// console.log('person1', person1.fullName);
+// person1.fullName = 'Amresh Singh';
 
 // console.log('person1', person1);
 
-console.log('person1', person1.fullName);
+// console.log('person1', person1.fullName);
 
+
+// static methods and properties
+
+// static method cannot be called in the object or instances
+// console.log(person1.classMethod());
+
+// static method can only be invoked via the class
+console.log(Person.classProperty());
 
