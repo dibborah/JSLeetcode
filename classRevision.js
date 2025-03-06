@@ -28,35 +28,34 @@
 // // console.log(user1);
 // console.log(Object.getPrototypeOf(user1));
 
-
 // getters and setters
 
-class Person {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  };
-  static classMethod() {
-    return 'this is a class method';
-  };
-  static classProperty() {
-    return 'this is a class property';
-  };
-  // getter method
-  get fullName() {// method made behave like a property
-    return `${this.firstName} ${this.lastName}`;
-  };
+// class Person {
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   };
+//   static classMethod() {
+//     return 'this is a class method';
+//   };
+//   static classProperty() {
+//     return 'this is a class property';
+//   };
+//   // getter method
+//   get fullName() {// method made behave like a property
+//     return `${this.firstName} ${this.lastName}`;
+//   };
 
-  // setter method
-  set fullName(fullName) {
-    const [firstName, lastName] = fullName.split(' ');
-    this.firstName = firstName;
-    this.lastName = lastName;
-  };
-};
+//   // setter method
+//   set fullName(fullName) {
+//     const [firstName, lastName] = fullName.split(' ');
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   };
+// };
 
-const person1 = new Person('harshit', 'sharma', 23);
+// const person1 = new Person('harshit', 'sharma', 23);
 
 // console.log('person1', person1);
 
@@ -74,5 +73,6 @@ const person1 = new Person('harshit', 'sharma', 23);
 // console.log(person1.classMethod());
 
 // static method can only be invoked via the class
-console.log(Person.classProperty());
+// console.log(Person.classProperty());
 
+console.log('Date.now()', Date.now());
